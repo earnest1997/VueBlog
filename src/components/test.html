@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+       body{
+        position: relative;
+        /*z-index: -1;*/
+        width:100vw;
+        height: 100vh;
+       }
+        div{
+            
+            top:0;
+            left:0;
+            width:100vw;
+            height: 100vh;
+           
+        }
+        .test1{
+position: absolute;
+            background-color: red;
+             z-index:90000000;
+        }
+        .test2{
+            position: absolute;
+            background-color: green;
+            z-index: 1000;
+     
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <de></de>
+    <fr></fr>
+</div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+
+<script type="text/javascript">
+   var str={}
+   str['a']=1
+   console.log(str)
+   
+
+    window.addEventListener("mousewheel",function scroll(){
+        console.log(56)
+    })
+   scroll()
+    window.removeEventListener("mousewheel",scroll)
+</script>
+</body>
+</html>template: '<div>A custom component!</div>'

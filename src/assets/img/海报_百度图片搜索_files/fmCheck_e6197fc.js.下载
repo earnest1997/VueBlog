@@ -1,0 +1,1 @@
+define("common:widget/ui/fmCheck/fmCheck",function(e,i,t){var n=e("common:widget/ui/base/base");t.exports.init=function(){n(function(){n("body").delegate("a","mousedown",function(){var e=this.href,i=n(this).attr("data-name");return"sug"===i?!1:void(e&&(this.href=e.replace(/(\?|&)fm=(result|detail|channel|index|picturelist|albumlist)(&|$)/gi,"$1")))})})}});

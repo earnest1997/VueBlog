@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let checklogin=function(){
+		// resolve是接口调用成功执行的回调。reject是失败调用的
+		return new promise(function(resolve,reject){
+        // 判断有没有登录,indexof返回元素所在的下标，要是有的话，下标就大于-1
+        let flag=document.cookie.indexOf('userid')>-1?true:flase;
+        if(flag){
+        	resolve({
+        		status:0;
+                result:true;
+        	})
+        }else{
+        	reject("error");
+        }
+		})
+	}
+	//checklogin返回一个promise
+	checklogin().then((res)=>{
+		if(res.status==0){
+			//...
+		}
+	}).catch((err)=>{
+		//这里的$是一个模板占位符，给之后的error信息占位，es6w3cplus,
+     console.log("error:$(error");
+	})
+</script>
+</body>
+</html>

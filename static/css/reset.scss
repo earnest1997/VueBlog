@@ -1,0 +1,26 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,form,input,div,button{margin:0;padding:0;}
+body,button,input,textarea{color:#333;font: 14px/1.4 'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;}
+h1,h2,h3,h4,h5,h6 { font-weight: normal;}
+input{outline:0 none;}
+img,input{border:none;}
+ul, ol{list-style:none;}
+i{font-style:normal;}
+button,input[type="button"],input[type='submit']{cursor:pointer;}
+a{text-decoration: none;cursor:pointer;color:#000;}
+/*a:hover{color:#ec584e;}*/
+a:focus,button:focus,input:focus {outline: 0}
+//定义各浏览器输入框placeholder的样式（已基本调整一致）
+input:input-placeholder,
+textarea:input-placeholder,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+color: #e6e6e6;
+}
+html,body{width:100%;background: #fff!important;}
+@media (max-width:768px){
+	html,body{
+		font-size: 13px!important;
+		height:auto!important;
+	}
+}
+

@@ -1,0 +1,10 @@
+.alert_box{
+	position: fixed;
+	top:20%;
+	left:50%;
+	width:30%;
+	transform: translateX(-15%);
+	height:20%;
+	opacity: 0;
+	background-color: #000;
+}

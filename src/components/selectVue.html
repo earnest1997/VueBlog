@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js wrapper component example (jquery plugin: select2)</title>
+    <!-- Delete ".min" for console warnings in development -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/select2@4.0.3"></script>
+    <link href="https://unpkg.com/select2@4.0.3/dist/css/select2.min.css" rel="stylesheet">
+    <style>
+      html, body {
+        font: 13px/18px sans-serif;
+      }
+      select {
+        min-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="el">
+    </div>
+
+    <!-- using string template here to work around HTML <option> placement restriction -->
+    <script type="text/x-template" id="demo-template">
+      <div>
+        <p>Selected: {{ selected }}</p>
+        <select2 :options="options" v-model="selected"> 
+          <!-- select对象的option 集合可返回包含 <select> 元素中所有 <option> 的一个数组。 -->
+          <option disabled value="0">Select one</option> 
+          <!-- value定义送往服务器的选项值。 -->
+        </select2>
+      </div>
+    </script>
+
+    <script type="text/x-template" id="select2-template">
+      <select>
+        <slot></slot>
+      </select>
+    </script>
+
+    <script>
+    Vue.component('select2', {
+      props: ['options', 'value'],
+      template: '#select2-template',
+      mounted: function () {
+        var vm = this
+        console.log(this.$el) //渲染后的子组件
+        $(this.$el)
+          .val(this.value)
+          // init select2
+          .select2({ data: this.options })
+          // emit event on change.
+          .on('change', function () {
+            vm.$emit('input', this.value) //格式是事件（或者要触发的方法名称，参数
+          })
+          console.log(this.value)
+      },
+      watch: {
+        value: function (value) {
+          // update value
+          $(this.$el).val(value).trigger('change') //trigger触发change事件
+        },
+        options: function (options) {
+          // update options
+          $(this.$el).select2({ data: options })
+        }
+      },
+      destroyed: function () {
+        console.log(455)
+        $(this.$el).off().select2('destroy') //off移除自定义事件监听器。没有提供参数，则移除所有的事件监听器
+      }
+    })
+    var vm = new Vue({
+      el: '#el',
+      template: '#demo-template',
+      data: {
+        selected: 0,
+        options: [
+          { id: 1, text: 'Hello' },
+          { id: 2, text: 'World' }
+        ]
+      }
+    })
+    </script>
+  </body>
+</html>

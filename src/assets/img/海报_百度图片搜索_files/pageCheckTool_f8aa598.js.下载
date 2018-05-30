@@ -1,0 +1,1 @@
+define("searchresult:widget/pageDisorderTip/pageCheckTool",function(e){var i=e("searchresult:widget/pageDisorderTip/pageDisorderCheck"),r=e("searchresult:widget/pageDisorderTip/pageDisorderTip"),t={init:function(){r.init()},startCheck:function(){i.checkIfPageBlocked(function(){r.show()})},on:function(e,i){r.addEventListener(e,i)}};return t});
