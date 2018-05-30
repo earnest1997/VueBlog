@@ -46,4 +46,8 @@ npm test
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083451.png)
 #个人相册
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083535.png)
+#账户管理
+![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530103250.png)
+#登录
+![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530103333.png)
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
