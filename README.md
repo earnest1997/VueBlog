@@ -34,7 +34,7 @@ npm test
 # 评论
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180513205914.png)
 # 文章
-![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180513210115.png)
+![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180605110024.png)
 # 关于界面
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083144.png)
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083355.png)
