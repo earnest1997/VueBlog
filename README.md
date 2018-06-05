@@ -40,7 +40,7 @@ npm test
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083355.png)
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180513205426.png)
 # 管理文章
-![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083431.png)
+![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180605182407.png)
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/G4RY%40MOK%24TVA()%7DRZ%5D4G39O.png)
 # 编辑界面
 ![image](https://github.com/earnest1997/VueBlog/blob/master/src/assets/img/QQ图片20180530083451.png)
