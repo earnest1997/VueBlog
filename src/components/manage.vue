@@ -37,13 +37,25 @@
 			}
 		},
 		computed:{
-			...mapState(['articles01','pagecount','cancel_flag']), //这里也请记得加上逗号
+			...mapState(['articles01','pagecount','cancel_flag']),
+			cancel(){
+				return this.cancel_flag
+			}
+		},
+		watch:{
+			cancel:function(){
+				if(this.cancel_flag){
+					this.$toast("删除成功")
+				}
+				this.remove_Cancelflag()
+			}
 		},
 		created(){
 			this.getPage({flag:true})
 			this.getallarticles({page:1,limit:4})
 		},
 		methods:{
+			...mapMutations(['remove_Cancelflag']),
 			...mapActions(['getallarticles','remove','getPage']),
 			pre(){
 				if(this.page==1){
@@ -71,13 +83,6 @@
 			},
 			deleteArticle(val,val01){
 				this.remove({Id:val})
-				if(this.cancel_flag){
-					this.$toast("删除成功")
-					this.cancel_flag=!this.cancel_flag
-				}
-				else{
-					this.$toast("删除失败")
-				}
 				this.getallarticles({page:this.page,limit:4})
 			},
 

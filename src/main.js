@@ -32,7 +32,9 @@ axios.interceptors.request.use(function(config){
 	// console.log(config.url=='/api/getpage'||config.url=='/api/getallarticles')
 	// 优先级比较运算符高于布尔，布尔运算符高于?:
 if(config.url=='/api/getallarticles'||config.url=='/api/getpage'){
-     store.commit("set_load")
+     setTimeout(function(){
+     	store.commit("set_load")
+     },600)
 }
 else{
 	config.url=='/api/addLike'||config.url=='/api/GetComment'?"":store.commit("set_loading")

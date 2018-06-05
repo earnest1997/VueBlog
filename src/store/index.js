@@ -95,6 +95,9 @@ mutations:{
 		set_flag(state,payload){
 			state.cancel_flag=true
 		},
+		remove_Cancelflag(state,payload){
+			state.cancel_flag=false
+		},
 		set_comment(state,payload){
 			state.comment=payload
 		},
@@ -238,7 +241,6 @@ mutations:{
 		remove({commit},payload){
 			axios.post('/api/deleteArticle',payload).then(
 				(response)=>{
-					// if(response.status==200){
 						commit("set_flag")
 					})
 		},
