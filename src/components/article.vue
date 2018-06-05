@@ -346,6 +346,7 @@ setTimeout(function(){
 		font-family: 微软雅黑;
 		text-align: center;
 		margin:1rem 0;
+		/*background: #fff;*/
 	}
 	.article_content{
 		font-family: 微软雅黑;
@@ -355,6 +356,9 @@ setTimeout(function(){
 		/*letter-spacing: .3rem;*/
 		/*单词之间的距离*/
 		word-spacing: .3rem;
+        box-shadow: 2px 2px 8px rgba(0,0,0,.2);
+        padding:1rem 2.5rem;
+        background: #fff;
 	}
 	.article_container{
 		position: relative;
